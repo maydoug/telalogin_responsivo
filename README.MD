@@ -1,2 +1,2 @@
 ## Tela de Login Resposivo :
-### Desenvolvimento Front-end
+### Desenvolvimento Front-end, utilizando HTML5 e CSS3
