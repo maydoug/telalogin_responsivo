@@ -5,7 +5,7 @@
 
 a {
     color:azure;
-    text-decoration: none;
+    text-decoration: none; /*tirar o sublinhado*/
     transition: 0.3s;
 }
 
@@ -21,7 +21,7 @@ a:hover {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Espaço ao redor seja a metado do espaço entre eles*/
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #23232e;
@@ -35,3 +35,58 @@ main {
     height: 92vh;
 }
 
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    color:azure;
+}
+
+.mobile-menu {
+    cursor: pointer; /*mostrar a mãozinha mouse*/
+    display: none; /*pois ele só aparecerar em telas menores*/
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background:azure;
+    margin: 8px;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right:0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%); /*Efeito para transição, porém gera um block
+        que só pode ser resolvido com a propriedade overflow-x: hidden; no body*/
+    }
+}
+
+.nav-list li {
+    margin-left: 0;
+    opacity: 0; /*Pois iremos fazer a animação*/
+}
+
+.mobile-menu {
+    display: block;
+
+}
+
+.nav-list.active{ /*.active classe que adicionamos com javascript*/
+    transform: translateX(0);
+}
