@@ -48,12 +48,42 @@ height:450px;
     margin-left:-100px; /* Metade do valor da Largura */
     margin-top:-50px; /* Metade da valor da Altura */
     position:absolute;
-    width: 350px; /* Valor da Largura */
-    height: 200px; /* Valor da Altura */
+    width: auto; /* Valor da Largura */
+    height: auto; /* Valor da Altura */
     color:#fff;
     background-color: #23232e;
     opacity: 75%;
     font-size: 23px;
+}
+
+.form-control {
+    outline: unset;
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #23232e;
+    border-radius: 8px;
+}
+.form-control:focus{
+    opacity: 85%;
+    transition: 0.3s;
+}
+
+.btn-control {
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    outline: unset;
+    padding: 8px;
+    width: 270px;
+    border: 2px solid #23232e;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+.btn-control:focus{
+    background-image: linear-gradient(to left,rgb(0, 92, 197), rgb(90, 20, 220));
+    opacity:85%;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .nav-list {
